@@ -5,6 +5,13 @@
 [![K3s](https://img.shields.io/badge/K3s-Single_Node-blue)](https://k3s.io/)
 [![ArgoCD](https://img.shields.io/badge/CD-ArgoCD-orange)](https://argoproj.github.io/cd/)
 [![Gitea](https://img.shields.io/badge/CI-Gitea_Actions-green)](https://gitea.io/)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+> [!NOTE]
+> **Disclaimer**  
+> 這是個人 Homelab 的學習紀錄，並非生產環境的最佳實踐。  
+> 文檔中的敏感資訊（IP、Token、ID）皆已脫敏或移除。  
+> 歡迎參考，但請依據自身環境調整，Use at your own risk。
 
 ---
 
@@ -125,7 +132,12 @@
 
 ## 授權
 
-本文檔以 [MIT License](LICENSE) 授權，歡迎參考使用。
+本文檔以 [CC BY-NC-SA 4.0](LICENSE) 授權。
+
+你可以自由分享與修改，但需：
+- 標註來源
+- 非商業用途
+- 以相同方式分享
 
 ---
 
