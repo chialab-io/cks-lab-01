@@ -156,7 +156,7 @@ kubectl scale statefulset actions-runner-act-runner -n gitea-runner --replicas=1
 
 | 項目 | 值 |
 |------|-----|
-| **Tailscale IP** | 100.96.128.95 |
+| **Tailscale IP** | 100.x.x.x |
 | **MetalLB IP 池** | 192.168.0.200 - 192.168.0.220 |
 | **Ingress IP** | 192.168.0.202 |
 | **域名** | cks-lab.uk |
@@ -176,8 +176,8 @@ kubectl scale statefulset actions-runner-act-runner -n gitea-runner --replicas=1
 
 | Type | Name | Content | Proxy |
 |------|------|---------|-------|
-| A | `*.int` | 100.96.128.95 | ❌ DNS only |
-| A | `@` | 100.96.128.95 | ❌ DNS only |
+| A | `*.int` | 100.x.x.x | ❌ DNS only |
+| A | `@` | 100.x.x.x | ❌ DNS only |
 
 ---
 

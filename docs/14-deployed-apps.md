@@ -32,7 +32,7 @@
 團隊成員需在本機 hosts 檔案加入：
 
 ```
-100.96.128.95 test-frontend.cks-lab-01.tailXXXXXX.ts.net
+100.x.x.x test-frontend.cks-lab-01.tailXXXXXX.ts.net
 ```
 
 ### ArgoCD Application

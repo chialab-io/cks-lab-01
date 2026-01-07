@@ -161,8 +161,8 @@ cks-lab.uk
 
 | Type | Name | Content | Proxy |
 |------|------|---------|-------|
-| A | `*.int` | `100.96.128.95` | ❌ DNS only |
-| A | `@` | `100.96.128.95` | ❌ DNS only |
+| A | `*.int` | `100.x.x.x` | ❌ DNS only |
+| A | `@` | `100.x.x.x` | ❌ DNS only |
 
 ### Cloudflare Tunnel
 

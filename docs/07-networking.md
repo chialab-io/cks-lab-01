@@ -115,7 +115,7 @@
 | 項目 | 設定 |
 |------|------|
 | **VPN** | Tailscale（主機層級安裝） |
-| **Tailscale IP** | 100.96.128.95 |
+| **Tailscale IP** | 100.x.x.x |
 | **DNS 解析** | Cloudflare DNS（`*.int.cks-lab.uk` → Tailscale IP） |
 | **負載均衡** | MetalLB (192.168.0.200-220) |
 | **Ingress** | Nginx Ingress Controller |
@@ -124,8 +124,8 @@
 
 | Type | Name | Content | Proxy |
 |------|------|---------|-------|
-| A | `*.int` | `100.96.128.95` | ❌ DNS only（灰色雲朵） |
-| A | `@` | `100.96.128.95` | ❌ DNS only（灰色雲朵） |
+| A | `*.int` | `100.x.x.x` | ❌ DNS only（灰色雲朵） |
+| A | `@` | `100.x.x.x` | ❌ DNS only（灰色雲朵） |
 
 > ⚠️ **重要**：內網服務的 DNS 記錄必須關閉 Proxy（灰色雲朵），否則流量會走 Cloudflare 而非直連 Tailscale。
 
@@ -195,10 +195,10 @@ cks-lab.uk
 
 ```
 # K3s 內網服務（透過 Tailscale）- 舊版
-100.96.128.95 rancher.cks-lab-01.tailXXXXXX.ts.net
-100.96.128.95 portainer.cks-lab-01.tailXXXXXX.ts.net
-100.96.128.95 gitea.cks-lab-01.tailXXXXXX.ts.net
-100.96.128.95 argocd.cks-lab-01.tailXXXXXX.ts.net
+100.x.x.x rancher.cks-lab-01.tailXXXXXX.ts.net
+100.x.x.x portainer.cks-lab-01.tailXXXXXX.ts.net
+100.x.x.x gitea.cks-lab-01.tailXXXXXX.ts.net
+100.x.x.x argocd.cks-lab-01.tailXXXXXX.ts.net
 ```
 
 ---
@@ -311,7 +311,7 @@ kubectl logs -n cloudflare-system -l app=cloudflared --tail=20
 開發者電腦（Tailscale 已連線）
   → http://git.int.cks-lab.uk
   → Cloudflare DNS（A 記錄，DNS-only）
-  → 100.96.128.95（Tailscale IP）
+  → 100.x.x.x（Tailscale IP）
   → Nginx Ingress
   → Gitea Service
   → Gitea Pod
@@ -323,7 +323,7 @@ kubectl logs -n cloudflare-system -l app=cloudflared --tail=20
 開發者電腦（Tailscale 已連線）
   → https://rancher.int.cks-lab.uk
   → Cloudflare DNS（A 記錄，DNS-only）
-  → 100.96.128.95（Tailscale IP）
+  → 100.x.x.x（Tailscale IP）
   → Nginx Ingress（TLS 終止，自簽憑證）
   → Rancher Service（HTTPS backend）
   → Rancher Pod

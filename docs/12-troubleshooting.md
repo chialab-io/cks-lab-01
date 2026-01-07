@@ -35,7 +35,7 @@
 
 ### 問題描述
 
-透過 Tailscale IP（100.96.128.95）無法連線到 Ingress 服務，但 MetalLB IP（192.168.0.202）可以正常連線。
+透過 Tailscale IP（100.x.x.x）無法連線到 Ingress 服務，但 MetalLB IP（192.168.0.202）可以正常連線。
 
 ### 原因
 
@@ -50,10 +50,10 @@
 ```
 # Windows: C:\Windows\System32\drivers\etc\hosts
 # Mac/Linux: /etc/hosts
-100.96.128.95 rancher.cks-lab-01.tailXXXXXX.ts.net
-100.96.128.95 portainer.cks-lab-01.tailXXXXXX.ts.net
-100.96.128.95 gitea.cks-lab-01.tailXXXXXX.ts.net
-100.96.128.95 argocd.cks-lab-01.tailXXXXXX.ts.net
+100.x.x.x rancher.cks-lab-01.tailXXXXXX.ts.net
+100.x.x.x portainer.cks-lab-01.tailXXXXXX.ts.net
+100.x.x.x gitea.cks-lab-01.tailXXXXXX.ts.net
+100.x.x.x argocd.cks-lab-01.tailXXXXXX.ts.net
 ```
 
 **2. Nginx Ingress 設定**：啟用 hostPort 讓 Ingress 監聽所有主機 IP：
@@ -68,7 +68,7 @@ controller:
   kind: DaemonSet
   service:
     externalIPs:
-      - "100.96.128.95"
+      - "100.x.x.x"
 ```
 
 ---
