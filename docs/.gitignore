@@ -1,0 +1,31 @@
+# ===========================================
+# CKS Lab Docs - 私有配置（不公開）
+# ===========================================
+
+# 完整配置備份（含 Helm values、Secret 範例）
+13-config-backup.md
+runner-config-backup.md
+
+# 私有設定目錄（含真實 ID 和敏感資訊）
+.private/
+
+# AI System Prompt（不需公開）
+CLAUDE.md
+GEMINI.md
+
+# ===========================================
+# 一般排除項目
+# ===========================================
+
+# macOS
+.DS_Store
+
+# Editor
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# 臨時檔案
+*.tmp
+*.bak
