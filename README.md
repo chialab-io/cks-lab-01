@@ -89,18 +89,18 @@
 
 | 文檔 | 說明 |
 |------|------|
-| [01-hardware-and-os.md](01-hardware-and-os.md) | 硬體配置與作業系統 |
-| [02-storage.md](02-storage.md) | 儲存空間規劃 (LVM) |
-| [03-k3s-cluster.md](03-k3s-cluster.md) | K3s 叢集設定與元件 |
-| [04-namespaces.md](04-namespaces.md) | Namespace 與資源配額 |
-| [05-cicd.md](05-cicd.md) | CI/CD 流程與分支策略 |
-| [06-registry.md](06-registry.md) | Container Registry 設定 |
-| [07-networking.md](07-networking.md) | 網路架構 |
-| [08-management-ui.md](08-management-ui.md) | 管理介面 |
-| [09-team-permissions.md](09-team-permissions.md) | 團隊權限規劃 |
-| [10-installation-progress.md](10-installation-progress.md) | 安裝進度追蹤 |
-| [11-commands-reference.md](11-commands-reference.md) | 常用指令參考 |
-| [12-troubleshooting.md](12-troubleshooting.md) | 問題排解紀錄 ⭐ |
+| [01-hardware-and-os.md](docs/01-hardware-and-os.md) | 硬體配置與作業系統 |
+| [02-storage.md](docs/02-storage.md) | 儲存空間規劃 (LVM) |
+| [03-k3s-cluster.md](docs/03-k3s-cluster.md) | K3s 叢集設定與元件 |
+| [04-namespaces.md](docs/04-namespaces.md) | Namespace 與資源配額 |
+| [05-cicd.md](docs/05-cicd.md) | CI/CD 流程與分支策略 |
+| [06-registry.md](docs/06-registry.md) | Container Registry 設定 |
+| [07-networking.md](docs/07-networking.md) | 網路架構 |
+| [08-management-ui.md](docs/08-management-ui.md) | 管理介面 |
+| [09-team-permissions.md](docs/09-team-permissions.md) | 團隊權限規劃 |
+| [10-installation-progress.md](docs/10-installation-progress.md) | 安裝進度追蹤 |
+| [11-commands-reference.md](docs/11-commands-reference.md) | 常用指令參考 |
+| [12-troubleshooting.md](docs/12-troubleshooting.md) | 問題排解紀錄 ⭐ |
 
 > ⭐ 推薦閱讀：`12-troubleshooting.md` 記錄了實際遇到的問題與解法
 
