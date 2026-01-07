@@ -73,7 +73,7 @@ controller:
 
 ---
 
-## 2. ArgoCD Helm chart 9.x Ingress 設定問題
+## 2. ArgoCD Helm chart Ingress 設定問題 (6.x+)
 
 ### 問題描述
 
@@ -81,7 +81,7 @@ controller:
 
 ### 原因
 
-ArgoCD Helm chart 9.x 版本的 Ingress 設定結構有變化，舊的 `hosts` 陣列設定不再生效，需使用 `hostname` 欄位。
+ArgoCD Helm chart 在 **6.x 版本後**（目前為 9.x）Ingress 設定結構有重大變化，舊的 `hosts` 陣列設定不再生效，需使用 `hostname` 欄位。
 
 ### 解決方案
 
@@ -483,7 +483,40 @@ npm error The `npm ci` command can only install with an existing package-lock.js
 
 ### 解決方案
 
-**方案 A：產生 package-lock.json（推薦）**
+> ⚠️ **注意：本專案規範使用 pnpm**
+
+根據專案規範 (`GEMINI.md`)，前端專案應強制使用 `pnpm`。如果遇到此錯誤，表示您的專案可能混用了 npm 與 pnpm，或者 CI 流程未正確設定。
+
+**建議方案：轉換為 pnpm 環境（推薦）**
+
+1. 確保本機使用 pnpm 安裝依賴：
+   ```bash
+   # 移除 npm lock (如果有的話)
+   rm package-lock.json
+   
+   # 安裝 pnpm (如果沒有)
+   corepack enable
+   
+   # 安裝依賴並產生 pnpm-lock.yaml
+   pnpm install
+   
+   # 提交變更
+   git add pnpm-lock.yaml
+   git commit -m "chore: migrate to pnpm"
+   git push
+   ```
+
+2. 修改 CI / Dockerfile 使用 pnpm：
+   ```dockerfile
+   # Dockerfile 範例
+   RUN npm install -g pnpm
+   COPY pnpm-lock.yaml package.json ./
+   RUN pnpm install --frozen-lockfile
+   ```
+
+**替代方案：僅修復 npm 錯誤 (不推薦)**
+
+如果不打算遷移到 pnpm，需產生 `package-lock.json`：
 
 ```bash
 # 在本機執行
@@ -493,7 +526,7 @@ git commit -m "fix: add package-lock.json"
 git push
 ```
 
-**方案 B：改用 npm install**
+**方案 B：改用 npm install (僅限測試)**
 
 修改 Dockerfile：
 
