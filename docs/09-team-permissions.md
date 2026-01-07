@@ -130,10 +130,10 @@ View Plus 權限:
 
 ```
 # K3s 內網服務（透過 Tailscale）- 舊版
-100.96.128.95 rancher.cks-lab-01.tailXXXXXX.ts.net
-100.96.128.95 portainer.cks-lab-01.tailXXXXXX.ts.net
-100.96.128.95 gitea.cks-lab-01.tailXXXXXX.ts.net
-100.96.128.95 argocd.cks-lab-01.tailXXXXXX.ts.net
+100.x.x.x rancher.cks-lab-01.tailXXXXXX.ts.net
+100.x.x.x portainer.cks-lab-01.tailXXXXXX.ts.net
+100.x.x.x gitea.cks-lab-01.tailXXXXXX.ts.net
+100.x.x.x argocd.cks-lab-01.tailXXXXXX.ts.net
 ```
 
 #### Mac 修改方式
